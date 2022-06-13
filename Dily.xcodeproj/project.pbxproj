@@ -13,6 +13,7 @@
 		2AE28A9C285712120008C83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9A285712120008C83B /* Main.storyboard */; };
 		2AE28A9E285712140008C83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9D285712140008C83B /* Assets.xcassets */; };
 		2AE28AA1285712140008C83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9F285712140008C83B /* LaunchScreen.storyboard */; };
+		2AE28AAB2857187D0008C83B /* KOTRAHOPE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		2AE28A9D285712140008C83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AE28AA0285712140008C83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AE28AA2285712140008C83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRAHOPE.ttf; sourceTree = "<group>"; };
+		2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRAHOPE.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 		2AE28A93285712120008C83B /* Dily */ = {
 			isa = PBXGroup;
 			children = (
+				2AE28AA82857181D0008C83B /* Font */,
 				2AE28A94285712120008C83B /* AppDelegate.swift */,
 				2AE28A96285712120008C83B /* SceneDelegate.swift */,
 				2AE28A98285712120008C83B /* ViewController.swift */,
@@ -65,6 +69,15 @@
 				2AE28AA2285712140008C83B /* Info.plist */,
 			);
 			path = Dily;
+			sourceTree = "<group>";
+		};
+		2AE28AA82857181D0008C83B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */,
+				2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +140,7 @@
 			files = (
 				2AE28AA1285712140008C83B /* LaunchScreen.storyboard in Resources */,
 				2AE28A9E285712140008C83B /* Assets.xcassets in Resources */,
+				2AE28AAB2857187D0008C83B /* KOTRAHOPE.ttf in Resources */,
 				2AE28A9C285712120008C83B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
