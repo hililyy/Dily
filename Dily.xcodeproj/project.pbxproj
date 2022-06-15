@@ -17,7 +17,9 @@
 		2AE28AAC285725A20008C83B /* KOTRAHOPE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */; };
 		2AE28AAE285726F60008C83B /* modalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AAD285726F60008C83B /* modalViewController.swift */; };
 		2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */; };
-		2AE28AB228574EFA0008C83B /* happy@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB128574EFA0008C83B /* happy@1x.png */; };
+		2AE28AB42858C2050008C83B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB32858C2050008C83B /* Colors.xcassets */; };
+		2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB52859C4DF0008C83B /* DetailViewController.swift */; };
+		2AE28AB82859FC030008C83B /* happy@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB72859FC030008C83B /* happy@1x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,9 @@
 		2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRAHOPE.otf; sourceTree = "<group>"; };
 		2AE28AAD285726F60008C83B /* modalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalViewController.swift; sourceTree = "<group>"; };
 		2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
-		2AE28AB128574EFA0008C83B /* happy@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "happy@1x.png"; sourceTree = "<group>"; };
+		2AE28AB32858C2050008C83B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2AE28AB52859C4DF0008C83B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2AE28AB72859FC030008C83B /* happy@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "happy@1x.png"; path = "Assets.xcassets/happy.imageset/happy@1x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,12 +75,14 @@
 				2AE28A96285712120008C83B /* SceneDelegate.swift */,
 				2AE28A98285712120008C83B /* ViewController.swift */,
 				2AE28AAD285726F60008C83B /* modalViewController.swift */,
+				2AE28AB52859C4DF0008C83B /* DetailViewController.swift */,
 				2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */,
 				2AE28A9A285712120008C83B /* Main.storyboard */,
 				2AE28A9D285712140008C83B /* Assets.xcassets */,
+				2AE28AB32858C2050008C83B /* Colors.xcassets */,
 				2AE28A9F285712140008C83B /* LaunchScreen.storyboard */,
 				2AE28AA2285712140008C83B /* Info.plist */,
-				2AE28AB128574EFA0008C83B /* happy@1x.png */,
+				2AE28AB72859FC030008C83B /* happy@1x.png */,
 			);
 			path = Dily;
 			sourceTree = "<group>";
@@ -150,10 +156,11 @@
 			files = (
 				2AE28AA1285712140008C83B /* LaunchScreen.storyboard in Resources */,
 				2AE28A9E285712140008C83B /* Assets.xcassets in Resources */,
-				2AE28AB228574EFA0008C83B /* happy@1x.png in Resources */,
 				2AE28AAC285725A20008C83B /* KOTRAHOPE.otf in Resources */,
 				2AE28AAB2857187D0008C83B /* KOTRAHOPE.ttf in Resources */,
 				2AE28A9C285712120008C83B /* Main.storyboard in Resources */,
+				2AE28AB82859FC030008C83B /* happy@1x.png in Resources */,
+				2AE28AB42858C2050008C83B /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +174,7 @@
 				2AE28AAE285726F60008C83B /* modalViewController.swift in Sources */,
 				2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */,
 				2AE28A99285712120008C83B /* ViewController.swift in Sources */,
+				2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */,
 				2AE28A95285712120008C83B /* AppDelegate.swift in Sources */,
 				2AE28A97285712120008C83B /* SceneDelegate.swift in Sources */,
 			);
