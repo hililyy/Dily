@@ -9,37 +9,43 @@
 /* Begin PBXBuildFile section */
 		2AE28A95285712120008C83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A94285712120008C83B /* AppDelegate.swift */; };
 		2AE28A97285712120008C83B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A96285712120008C83B /* SceneDelegate.swift */; };
-		2AE28A99285712120008C83B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A98285712120008C83B /* ViewController.swift */; };
+		2AE28A99285712120008C83B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A98285712120008C83B /* MainVC.swift */; };
 		2AE28A9C285712120008C83B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9A285712120008C83B /* Main.storyboard */; };
 		2AE28A9E285712140008C83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9D285712140008C83B /* Assets.xcassets */; };
 		2AE28AA1285712140008C83B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28A9F285712140008C83B /* LaunchScreen.storyboard */; };
 		2AE28AAB2857187D0008C83B /* KOTRAHOPE.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */; };
 		2AE28AAC285725A20008C83B /* KOTRAHOPE.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */; };
-		2AE28AAE285726F60008C83B /* modalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AAD285726F60008C83B /* modalViewController.swift */; };
+		2AE28AAE285726F60008C83B /* WriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AAD285726F60008C83B /* WriteVC.swift */; };
 		2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */; };
 		2AE28AB42858C2050008C83B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB32858C2050008C83B /* Colors.xcassets */; };
-		2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB52859C4DF0008C83B /* DetailViewController.swift */; };
-		2AE28AB82859FC030008C83B /* happy@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB72859FC030008C83B /* happy@1x.png */; };
-		2AE28ABA285B20190008C83B /* DiaryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB9285B20190008C83B /* DiaryEntity.swift */; };
+		2AE28AB62859C4DF0008C83B /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB52859C4DF0008C83B /* DetailVC.swift */; };
+		2AE28ABF285B22140008C83B /* DiaryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28ABE285B22140008C83B /* DiaryEntity.swift */; };
+		2AE28AC1285B392B0008C83B /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC0285B392B0008C83B /* DiaryModel.swift */; };
+		2AE28AC3285B427D0008C83B /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC2285B427D0008C83B /* LocalDataStore.swift */; };
+		2AE28AC7285B4A0D0008C83B /* LocalDataKeySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC6285B4A0D0008C83B /* LocalDataKeySet.swift */; };
+		2AE28AC9285B92120008C83B /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC8285B92110008C83B /* DeleteVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2AE28A91285712120008C83B /* Dily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE28A94285712120008C83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE28A96285712120008C83B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2AE28A98285712120008C83B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2AE28A98285712120008C83B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		2AE28A9B285712120008C83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AE28A9D285712140008C83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AE28AA0285712140008C83B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AE28AA2285712140008C83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRAHOPE.ttf; sourceTree = "<group>"; };
 		2AE28AAA2857184B0008C83B /* KOTRAHOPE.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOTRAHOPE.otf; sourceTree = "<group>"; };
-		2AE28AAD285726F60008C83B /* modalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalViewController.swift; sourceTree = "<group>"; };
+		2AE28AAD285726F60008C83B /* WriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteVC.swift; sourceTree = "<group>"; };
 		2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
 		2AE28AB32858C2050008C83B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		2AE28AB52859C4DF0008C83B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		2AE28AB72859FC030008C83B /* happy@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "happy@1x.png"; path = "Assets.xcassets/happy.imageset/happy@1x.png"; sourceTree = "<group>"; };
-		2AE28AB9285B20190008C83B /* DiaryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntity.swift; sourceTree = "<group>"; };
+		2AE28AB52859C4DF0008C83B /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		2AE28ABE285B22140008C83B /* DiaryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntity.swift; sourceTree = "<group>"; };
+		2AE28AC0285B392B0008C83B /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		2AE28AC2285B427D0008C83B /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
+		2AE28AC6285B4A0D0008C83B /* LocalDataKeySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataKeySet.swift; sourceTree = "<group>"; };
+		2AE28AC8285B92110008C83B /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,20 +78,25 @@
 		2AE28A93285712120008C83B /* Dily */ = {
 			isa = PBXGroup;
 			children = (
+				2AE28AC4285B49D50008C83B /* Util */,
+				2AE28ABD285B21B20008C83B /* Model */,
+				2AE28ABB285B21680008C83B /* View */,
+				2AE28ABC285B219F0008C83B /* ViewModel */,
 				2AE28AA82857181D0008C83B /* Font */,
 				2AE28A94285712120008C83B /* AppDelegate.swift */,
 				2AE28A96285712120008C83B /* SceneDelegate.swift */,
-				2AE28A98285712120008C83B /* ViewController.swift */,
-				2AE28AAD285726F60008C83B /* modalViewController.swift */,
-				2AE28AB52859C4DF0008C83B /* DetailViewController.swift */,
+				2AE28A98285712120008C83B /* MainVC.swift */,
+				2AE28AAD285726F60008C83B /* WriteVC.swift */,
+				2AE28ABE285B22140008C83B /* DiaryEntity.swift */,
+				2AE28AC0285B392B0008C83B /* DiaryModel.swift */,
+				2AE28AB52859C4DF0008C83B /* DetailVC.swift */,
+				2AE28AC8285B92110008C83B /* DeleteVC.swift */,
 				2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */,
 				2AE28A9A285712120008C83B /* Main.storyboard */,
-				2AE28AB9285B20190008C83B /* DiaryEntity.swift */,
 				2AE28A9D285712140008C83B /* Assets.xcassets */,
 				2AE28AB32858C2050008C83B /* Colors.xcassets */,
 				2AE28A9F285712140008C83B /* LaunchScreen.storyboard */,
 				2AE28AA2285712140008C83B /* Info.plist */,
-				2AE28AB72859FC030008C83B /* happy@1x.png */,
 			);
 			path = Dily;
 			sourceTree = "<group>";
@@ -97,6 +108,44 @@
 				2AE28AA92857184B0008C83B /* KOTRAHOPE.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		2AE28ABB285B21680008C83B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AE28ABC285B219F0008C83B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AE28ABD285B21B20008C83B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AE28AC4285B49D50008C83B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				2AE28AC5285B49F20008C83B /* LocalData */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2AE28AC5285B49F20008C83B /* LocalData */ = {
+			isa = PBXGroup;
+			children = (
+				2AE28AC2285B427D0008C83B /* LocalDataStore.swift */,
+				2AE28AC6285B4A0D0008C83B /* LocalDataKeySet.swift */,
+			);
+			path = LocalData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +211,6 @@
 				2AE28AAC285725A20008C83B /* KOTRAHOPE.otf in Resources */,
 				2AE28AAB2857187D0008C83B /* KOTRAHOPE.ttf in Resources */,
 				2AE28A9C285712120008C83B /* Main.storyboard in Resources */,
-				2AE28AB82859FC030008C83B /* happy@1x.png in Resources */,
 				2AE28AB42858C2050008C83B /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,11 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE28AAE285726F60008C83B /* modalViewController.swift in Sources */,
+				2AE28AC3285B427D0008C83B /* LocalDataStore.swift in Sources */,
+				2AE28AC7285B4A0D0008C83B /* LocalDataKeySet.swift in Sources */,
+				2AE28AAE285726F60008C83B /* WriteVC.swift in Sources */,
+				2AE28AC9285B92120008C83B /* DeleteVC.swift in Sources */,
 				2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */,
-				2AE28A99285712120008C83B /* ViewController.swift in Sources */,
-				2AE28ABA285B20190008C83B /* DiaryEntity.swift in Sources */,
-				2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */,
+				2AE28A99285712120008C83B /* MainVC.swift in Sources */,
+				2AE28ABF285B22140008C83B /* DiaryEntity.swift in Sources */,
+				2AE28AB62859C4DF0008C83B /* DetailVC.swift in Sources */,
+				2AE28AC1285B392B0008C83B /* DiaryModel.swift in Sources */,
 				2AE28A95285712120008C83B /* AppDelegate.swift in Sources */,
 				2AE28A97285712120008C83B /* SceneDelegate.swift in Sources */,
 			);

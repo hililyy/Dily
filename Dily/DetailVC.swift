@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailVC: UIViewController {
 
     @IBOutlet weak var todayDate: UILabel!
     @IBOutlet weak var todayEmotion: UIImageView!

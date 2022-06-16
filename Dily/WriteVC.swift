@@ -1,5 +1,5 @@
 //
-//  modalViewController.swift
+//  WriteVC.swift
 //  Dily
 //
 //  Created by 강조은 on 2022/06/13.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class modalViewController: UIViewController {
+class WriteVC: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -24,7 +24,7 @@ class modalViewController: UIViewController {
     var enteredContents: String?
     var todayDate: String?
     
-    weak var delegate: SendDataDelegate?
+    weak var delegate: ReloadDataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,18 +86,21 @@ class modalViewController: UIViewController {
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         todayDate = dateFormatter.string(from: Date())
         
-        
         guard let selectedEmotion = self.selectedEmotion,
               let enteredTitle = self.enteredTitle,
               let enteredContents = self.enteredContents,
               let todayDate = self.todayDate
-        else {
-            return
-        }
-        self.delegate?.sendData(emotion: selectedEmotion, title: enteredTitle, contents: enteredContents, date: todayDate)
+        else { return }
+        
+        LocalDataStore.localDataStore.setTitle(title: enteredTitle)
+        LocalDataStore.localDataStore.setContents(contents: enteredContents)
+        LocalDataStore.localDataStore.setDate(date: todayDate)
+        LocalDataStore.localDataStore.setEmotion(emotion: selectedEmotion)
+        
+        self.delegate?.reloadMainTable()
         self.dismiss(animated: true)
     }
 }
-protocol SendDataDelegate: AnyObject {
-    func sendData(emotion: String, title: String, contents: String, date: String)
+protocol ReloadDataDelegate: AnyObject {
+    func reloadMainTable()
 }

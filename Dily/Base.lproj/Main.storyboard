@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="writeDiary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fp5-b1-DUF"/>
+                                    <action selector="writeDiary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Upz-6O-pjB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,17 +123,17 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="diaryTableView" destination="hKy-7F-03Y" id="ujV-Qh-JCZ"/>
+                        <outlet property="diaryTableView" destination="hKy-7F-03Y" id="q17-jI-khF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
-        <!--Modal View Controller-->
+        <!--WriteVC-->
         <scene sceneID="5Jy-tE-jcb">
             <objects>
-                <viewController storyboardIdentifier="modalViewController" id="Kk6-0w-nF2" customClass="modalViewController" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WriteVC" id="Kk6-0w-nF2" customClass="WriteVC" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fjf-fx-0eT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,7 +200,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="love"/>
                                         <connections>
-                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="Ugv-QJ-bmi"/>
+                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="9me-bY-7KG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-aR-jHS">
@@ -213,7 +213,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="happy"/>
                                         <connections>
-                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="2Zm-8W-uTK"/>
+                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="hXx-Mz-Arq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqF-sg-Vuq">
@@ -226,7 +226,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sick"/>
                                         <connections>
-                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="6n2-Fl-qVk"/>
+                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="N20-tD-gfa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHx-0G-eLK">
@@ -239,7 +239,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="sad"/>
                                         <connections>
-                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="Ylt-eE-S5f"/>
+                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="a3v-dO-3PW"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPJ-71-yhr">
@@ -252,7 +252,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="angry"/>
                                         <connections>
-                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="niC-dW-abB"/>
+                                            <action selector="tabEmotionBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="ig0-cN-4If"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -267,7 +267,7 @@
                                     <color key="titleShadowColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="enterBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="DDu-wY-PZ6"/>
+                                    <action selector="enterBtn:" destination="Kk6-0w-nF2" eventType="touchUpInside" id="Lfj-cV-z3C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -303,24 +303,24 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="angryBtn" destination="SPJ-71-yhr" id="NVR-H0-YXm"/>
-                        <outlet property="contentsTextView" destination="fmM-p2-NDr" id="r7h-ec-NbO"/>
-                        <outlet property="enterBtn" destination="Hca-Zh-atH" id="1DP-qO-8Vm"/>
-                        <outlet property="happyBtn" destination="baQ-aR-jHS" id="lQc-ii-Iqs"/>
-                        <outlet property="loveBtn" destination="vTn-Bb-heP" id="WE2-92-plz"/>
-                        <outlet property="sadBtn" destination="SHx-0G-eLK" id="WgW-mf-m8x"/>
-                        <outlet property="sickBtn" destination="eqF-sg-Vuq" id="Taa-hJ-AlA"/>
-                        <outlet property="titleTextField" destination="9Hg-sb-HcY" id="Dm0-82-EWj"/>
+                        <outlet property="angryBtn" destination="SPJ-71-yhr" id="bbP-4L-j8V"/>
+                        <outlet property="contentsTextView" destination="fmM-p2-NDr" id="Ki1-lg-bwS"/>
+                        <outlet property="enterBtn" destination="Hca-Zh-atH" id="QNb-6o-cLj"/>
+                        <outlet property="happyBtn" destination="baQ-aR-jHS" id="7dd-nV-T3u"/>
+                        <outlet property="loveBtn" destination="vTn-Bb-heP" id="S1d-fr-uGv"/>
+                        <outlet property="sadBtn" destination="SHx-0G-eLK" id="3UM-gh-xrW"/>
+                        <outlet property="sickBtn" destination="eqF-sg-Vuq" id="Grg-Ip-t5F"/>
+                        <outlet property="titleTextField" destination="9Hg-sb-HcY" id="wa0-ik-uL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rQ-DM-mmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="-246.42857142857142"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--DetailVC-->
         <scene sceneID="tVp-AZ-6KA">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="LG0-gX-2f5" customClass="DetailViewController" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="LG0-gX-2f5" customClass="DetailVC" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DnU-iH-OmH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +362,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용이다" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZ8-hv-92V" customClass="PaddingLabel" customModule="Dily" customModuleProvider="target">
-                                                        <rect key="frame" x="40" y="295" width="264" height="39.5"/>
+                                                        <rect key="frame" x="40" y="295" width="264" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -414,7 +414,19 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="icon_x"/>
                                                         <connections>
-                                                            <action selector="close:" destination="LG0-gX-2f5" eventType="touchUpInside" id="b6j-rB-knD"/>
+                                                            <action selector="close:" destination="LG0-gX-2f5" eventType="touchUpInside" id="lbh-qs-bSc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPZ-BN-z8c">
+                                                        <rect key="frame" x="253.5" y="586" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Hfn-H4-O7k"/>
+                                                            <constraint firstAttribute="width" constant="60" id="UbW-CG-Fgf"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="ic_trash"/>
+                                                        <connections>
+                                                            <action selector="goDelete:" destination="LG0-gX-2f5" eventType="touchUpInside" id="QKX-Yj-xZd"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -422,6 +434,7 @@
                                                     <constraint firstAttribute="width" constant="344" id="2YT-9g-qSW"/>
                                                     <constraint firstItem="qXf-Wt-6v4" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="41" id="3SF-BJ-ise"/>
                                                     <constraint firstItem="q4j-Pe-lS0" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="40" id="5zj-cg-m4i"/>
+                                                    <constraint firstItem="36p-dg-6a6" firstAttribute="trailing" secondItem="FPZ-BN-z8c" secondAttribute="trailing" constant="30" id="9yy-Zc-xEM"/>
                                                     <constraint firstItem="K2S-lR-an1" firstAttribute="top" secondItem="gNy-nn-eJG" secondAttribute="bottom" constant="15" id="E4B-ac-aXF"/>
                                                     <constraint firstItem="K2S-lR-an1" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="40" id="F1o-dQ-JMq"/>
                                                     <constraint firstItem="36p-dg-6a6" firstAttribute="trailing" secondItem="aSg-WY-hv0" secondAttribute="trailing" constant="40" id="IjD-5b-mOJ"/>
@@ -429,6 +442,7 @@
                                                     <constraint firstItem="q4j-Pe-lS0" firstAttribute="top" secondItem="29X-z6-JMI" secondAttribute="top" constant="70" id="JEG-Nx-SH1"/>
                                                     <constraint firstItem="CZ8-hv-92V" firstAttribute="top" secondItem="qXf-Wt-6v4" secondAttribute="bottom" constant="10" id="Kc1-Md-1CP"/>
                                                     <constraint firstItem="29X-z6-JMI" firstAttribute="trailing" secondItem="gNy-nn-eJG" secondAttribute="trailing" constant="40" id="Nrc-dn-deo"/>
+                                                    <constraint firstItem="29X-z6-JMI" firstAttribute="bottom" secondItem="FPZ-BN-z8c" secondAttribute="bottom" constant="30" id="QfE-D2-goF"/>
                                                     <constraint firstItem="BcS-J8-lRa" firstAttribute="top" secondItem="aSg-WY-hv0" secondAttribute="bottom" constant="19" id="TFy-F8-c9o"/>
                                                     <constraint firstItem="36p-dg-6a6" firstAttribute="trailing" secondItem="BcS-J8-lRa" secondAttribute="trailing" constant="60" id="dxC-SE-z54"/>
                                                     <constraint firstItem="gNy-nn-eJG" firstAttribute="top" secondItem="BcS-J8-lRa" secondAttribute="bottom" constant="50" id="ekC-Mi-iFM"/>
@@ -487,18 +501,108 @@
             </objects>
             <point key="canvasLocation" x="748" y="463"/>
         </scene>
+        <!--DeleteVC-->
+        <scene sceneID="B4t-us-Xmw">
+            <objects>
+                <viewController storyboardIdentifier="DeleteVC" id="osi-My-WRO" customClass="DeleteVC" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cRz-wd-uk4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qd-Db-fM2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zb4-Vh-AC0">
+                                        <rect key="frame" x="50" y="358" width="314" height="180"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9z-HK-4AS">
+                                                <rect key="frame" x="0.0" y="125" width="314" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE5-ux-GBc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="157" height="55"/>
+                                                        <color key="backgroundColor" red="0.88999998569488525" green="0.72899997234344482" blue="0.85500001907348633" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="삭제">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="deleteDiary:" destination="osi-My-WRO" eventType="touchUpInside" id="I6T-Qk-zhg"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypt-UO-Idr">
+                                                        <rect key="frame" x="157" y="0.0" width="157" height="55"/>
+                                                        <color key="backgroundColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="18"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="취소">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="cancel:" destination="osi-My-WRO" eventType="touchUpInside" id="LuT-2l-L0N"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="5uJ-bC-IkB"/>
+                                                    <constraint firstItem="ypt-UO-Idr" firstAttribute="width" secondItem="cE5-ux-GBc" secondAttribute="width" id="ZIN-Tb-669"/>
+                                                    <constraint firstItem="ypt-UO-Idr" firstAttribute="height" secondItem="cE5-ux-GBc" secondAttribute="height" id="z05-om-32t"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삭제하시겠습니까?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0qS-F8-m3t">
+                                                <rect key="frame" x="30" y="65" width="254" height="24"/>
+                                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0qS-F8-m3t" firstAttribute="top" secondItem="Zb4-Vh-AC0" secondAttribute="top" constant="65" id="IMZ-Tc-fNJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="l9z-HK-4AS" secondAttribute="trailing" id="MiC-Qr-IGF"/>
+                                            <constraint firstItem="l9z-HK-4AS" firstAttribute="top" secondItem="0qS-F8-m3t" secondAttribute="bottom" constant="36" id="Vk2-4k-DHh"/>
+                                            <constraint firstItem="l9z-HK-4AS" firstAttribute="leading" secondItem="Zb4-Vh-AC0" secondAttribute="leading" id="YNh-cl-Nut"/>
+                                            <constraint firstItem="0qS-F8-m3t" firstAttribute="centerX" secondItem="Zb4-Vh-AC0" secondAttribute="centerX" id="exY-mS-OJS"/>
+                                            <constraint firstAttribute="bottom" secondItem="l9z-HK-4AS" secondAttribute="bottom" id="msJ-Ao-0CH"/>
+                                            <constraint firstAttribute="height" constant="180" id="n5k-31-c8n"/>
+                                            <constraint firstItem="0qS-F8-m3t" firstAttribute="leading" secondItem="Zb4-Vh-AC0" secondAttribute="leading" constant="30" id="zZt-Yx-GTd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zb4-Vh-AC0" firstAttribute="centerY" secondItem="9Qd-Db-fM2" secondAttribute="centerY" id="KpW-7O-rG7"/>
+                                    <constraint firstItem="Zb4-Vh-AC0" firstAttribute="centerX" secondItem="9Qd-Db-fM2" secondAttribute="centerX" id="SOT-ej-EYH"/>
+                                    <constraint firstItem="Zb4-Vh-AC0" firstAttribute="leading" secondItem="9Qd-Db-fM2" secondAttribute="leading" constant="50" id="UPQ-O0-Z5a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="972-ju-7BN"/>
+                        <constraints>
+                            <constraint firstItem="9Qd-Db-fM2" firstAttribute="leading" secondItem="cRz-wd-uk4" secondAttribute="leading" id="DS6-Pd-Che"/>
+                            <constraint firstItem="9Qd-Db-fM2" firstAttribute="top" secondItem="cRz-wd-uk4" secondAttribute="top" id="QCm-oN-neM"/>
+                            <constraint firstAttribute="bottom" secondItem="9Qd-Db-fM2" secondAttribute="bottom" id="TDx-fu-VoB"/>
+                            <constraint firstAttribute="trailing" secondItem="9Qd-Db-fM2" secondAttribute="trailing" id="azj-p2-2ue"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arK-xJ-8cx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510.144927536232" y="462.72321428571428"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="CZ8-hv-92V">
-            <size key="intrinsicContentSize" width="76" height="39.5"/>
+            <size key="intrinsicContentSize" width="58" height="23.5"/>
         </designable>
         <designable name="K2S-lR-an1">
-            <size key="intrinsicContentSize" width="76.5" height="39.5"/>
+            <size key="intrinsicContentSize" width="58.5" height="23.5"/>
         </designable>
     </designables>
     <resources>
         <image name="angry" width="91" height="91"/>
         <image name="happy" width="91" height="92"/>
+        <image name="ic_trash" width="24" height="24"/>
         <image name="icon_x" width="22" height="22"/>
         <image name="line_purple" width="175" height="53"/>
         <image name="love" width="93" height="91"/>
