@@ -20,6 +20,7 @@
 		2AE28AB42858C2050008C83B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB32858C2050008C83B /* Colors.xcassets */; };
 		2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB52859C4DF0008C83B /* DetailViewController.swift */; };
 		2AE28AB82859FC030008C83B /* happy@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AE28AB72859FC030008C83B /* happy@1x.png */; };
+		2AE28ABA285B20190008C83B /* DiaryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AB9285B20190008C83B /* DiaryEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2AE28AB32858C2050008C83B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2AE28AB52859C4DF0008C83B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2AE28AB72859FC030008C83B /* happy@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "happy@1x.png"; path = "Assets.xcassets/happy.imageset/happy@1x.png"; sourceTree = "<group>"; };
+		2AE28AB9285B20190008C83B /* DiaryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				2AE28AB52859C4DF0008C83B /* DetailViewController.swift */,
 				2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */,
 				2AE28A9A285712120008C83B /* Main.storyboard */,
+				2AE28AB9285B20190008C83B /* DiaryEntity.swift */,
 				2AE28A9D285712140008C83B /* Assets.xcassets */,
 				2AE28AB32858C2050008C83B /* Colors.xcassets */,
 				2AE28A9F285712140008C83B /* LaunchScreen.storyboard */,
@@ -174,6 +177,7 @@
 				2AE28AAE285726F60008C83B /* modalViewController.swift in Sources */,
 				2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */,
 				2AE28A99285712120008C83B /* ViewController.swift in Sources */,
+				2AE28ABA285B20190008C83B /* DiaryEntity.swift in Sources */,
 				2AE28AB62859C4DF0008C83B /* DetailViewController.swift in Sources */,
 				2AE28A95285712120008C83B /* AppDelegate.swift in Sources */,
 				2AE28A97285712120008C83B /* SceneDelegate.swift in Sources */,

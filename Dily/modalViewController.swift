@@ -81,16 +81,21 @@ class modalViewController: UIViewController {
     @IBAction func enterBtn(_ sender: Any) {
         enteredTitle = titleTextField.text
         enteredContents = contentsTextView.text
-        dismiss(animated: true, completion: {
-            guard let selectedEmotion = self.selectedEmotion,
-                  let enteredTitle = self.enteredTitle,
-                  let enteredContents = self.enteredContents
-                  let 
-            else {
-                return
-            }
-            self.delegate?.sendData(emotion: selectedEmotion, title: enteredTitle, contents: enteredContents, date: todayDate)
-        })
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        todayDate = dateFormatter.string(from: Date())
+        
+        
+        guard let selectedEmotion = self.selectedEmotion,
+              let enteredTitle = self.enteredTitle,
+              let enteredContents = self.enteredContents,
+              let todayDate = self.todayDate
+        else {
+            return
+        }
+        self.delegate?.sendData(emotion: selectedEmotion, title: enteredTitle, contents: enteredContents, date: todayDate)
+        self.dismiss(animated: true)
     }
 }
 protocol SendDataDelegate: AnyObject {

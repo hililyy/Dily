@@ -51,16 +51,24 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.todayEmotionData = emotionData[indexPath.row]
+            vc.todayTitleData = titleData[indexPath.row]
+            vc.todayContentsData = contentsData[indexPath.row]
+            vc.todayDateData = dateData[indexPath.row]
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
 }
 
 extension ViewController: SendDataDelegate {
-    func sendData(emotion: String, title: String, contents: String) {
+    func sendData(emotion: String, title: String, contents: String, date: String) {
         titleData.append(title)
         contentsData.append(contents)
-        
+        dateData.append(date)
         switch emotion {
             case "love":
             guard let emotionImage = UIImage(named: "love") else { return }
@@ -80,11 +88,6 @@ extension ViewController: SendDataDelegate {
         default:
             return
         }
-        
         diaryTableView.reloadData()
     }
-}
-
-protocol SendDetailDataDeligate: AnyObject {
-    func sendDetailData(emotion: String, title: String, contents: String)
 }
