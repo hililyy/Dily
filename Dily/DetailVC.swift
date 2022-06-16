@@ -19,6 +19,7 @@ class DetailVC: UIViewController {
     var todayEmotionData: UIImage?
     var todayTitleData: String?
     var todayContentsData: String?
+    var diaryIndex: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,16 @@ class DetailVC: UIViewController {
     
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+
+    @IBAction func goDelete(_ sender: Any) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteVC") as? DeleteVC {
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.diaryIndex = self.diaryIndex
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 
