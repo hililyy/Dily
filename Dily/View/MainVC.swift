@@ -9,8 +9,9 @@ import UIKit
 
 class MainVC: UIViewController {
     var emotionData: UIImage?
-    
     @IBOutlet weak var diaryTableView: UITableView!
+    
+    let viewModel: DiaryViewModel = DiaryViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         diaryTableView.delegate = self

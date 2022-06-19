@@ -9,11 +9,10 @@ import UIKit
 
 class DeleteVC: UIViewController {
     var diaryIndex: Int?
+    let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func deleteDiary(_ sender: Any) {
@@ -23,7 +22,7 @@ class DeleteVC: UIViewController {
         LocalDataStore.localDataStore.delEmotion(index: diaryIndex)
         LocalDataStore.localDataStore.delDate(index: diaryIndex)
         
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancel(_ sender: Any) {

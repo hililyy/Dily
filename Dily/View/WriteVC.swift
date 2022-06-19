@@ -25,7 +25,7 @@ class WriteVC: UIViewController {
     var todayDate: String?
     
     weak var delegate: ReloadDataDelegate?
-    
+    let viewModel: DiaryViewModel = DiaryViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         initalize()
@@ -103,4 +103,22 @@ class WriteVC: UIViewController {
 }
 protocol ReloadDataDelegate: AnyObject {
     func reloadMainTable()
+}
+
+@IBDesignable class PaddingTextField: UITextField {
+
+    @IBInspectable var topInset: CGFloat = 5.0
+    @IBInspectable var bottomInset: CGFloat = 5.0
+    @IBInspectable var leftInset: CGFloat = 8.0
+    @IBInspectable var rightInset: CGFloat = 8.0
+    
+    override func drawText(in rect: CGRect) {
+        let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
+        super.drawText(in: rect.inset(by: insets))
+    }
+
+    override var intrinsicContentSize: CGSize {
+    let size = super.intrinsicContentSize
+    return CGSize(width: size.width + leftInset + rightInset, height: size.height + topInset + bottomInset)
+    }
 }

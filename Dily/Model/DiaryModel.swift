@@ -6,5 +6,6 @@
 //
 
 import Foundation
-
-var diaryList: [DiaryEntity] = []
+class DiaryModel {
+    var diaryList: [DiaryEntity] = []
+}

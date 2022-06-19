@@ -20,6 +20,7 @@ class DetailVC: UIViewController {
     var todayTitleData: String?
     var todayContentsData: String?
     var diaryIndex: Int?
+    let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
