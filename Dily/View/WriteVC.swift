@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WriteVC: UIViewController {
+class WriteVC: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -25,9 +25,13 @@ class WriteVC: UIViewController {
     var todayDate: String?
     
     weak var delegate: ReloadDataDelegate?
+    let model: DiaryModel = DiaryModel()
     let viewModel: DiaryViewModel = DiaryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleTextField.delegate = self
+        contentsTextView.delegate = self
         initalize()
     }
     
@@ -74,51 +78,36 @@ class WriteVC: UIViewController {
         self.angryBtn.alpha = emotion == "angry" ? 1 : 0.2
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
     @IBAction func enterBtn(_ sender: Any) {
         enteredTitle = titleTextField.text
         enteredContents = contentsTextView.text
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
-        todayDate = dateFormatter.string(from: Date())
-        
         guard let selectedEmotion = self.selectedEmotion,
               let enteredTitle = self.enteredTitle,
-              let enteredContents = self.enteredContents,
-              let todayDate = self.todayDate
+              let enteredContents = self.enteredContents
         else { return }
         
-        LocalDataStore.localDataStore.setTitle(title: enteredTitle)
-        LocalDataStore.localDataStore.setContents(contents: enteredContents)
-        LocalDataStore.localDataStore.setDate(date: todayDate)
-        LocalDataStore.localDataStore.setEmotion(emotion: selectedEmotion)
+        model.createDiaryData(
+            enteredTitle: enteredTitle,
+            enteredContents: enteredContents,
+            selectedEmotion: selectedEmotion)
         
         self.delegate?.reloadMainTable()
         self.dismiss(animated: true)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
 protocol ReloadDataDelegate: AnyObject {
     func reloadMainTable()
 }
 
-@IBDesignable class PaddingTextField: UITextField {
-
-    @IBInspectable var topInset: CGFloat = 5.0
-    @IBInspectable var bottomInset: CGFloat = 5.0
-    @IBInspectable var leftInset: CGFloat = 8.0
-    @IBInspectable var rightInset: CGFloat = 8.0
-    
-    override func drawText(in rect: CGRect) {
-        let insets = UIEdgeInsets.init(top: topInset, left: leftInset, bottom: bottomInset, right: rightInset)
-        super.drawText(in: rect.inset(by: insets))
-    }
-
-    override var intrinsicContentSize: CGSize {
-    let size = super.intrinsicContentSize
-    return CGSize(width: size.width + leftInset + rightInset, height: size.height + topInset + bottomInset)
-    }
+extension WriteVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        titleTextField.resignFirstResponder()
+        contentsTextView.resignFirstResponder()
+            return true
+        }
 }

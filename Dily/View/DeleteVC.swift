@@ -9,18 +9,21 @@ import UIKit
 
 class DeleteVC: UIViewController {
     var diaryIndex: Int?
+    let model: DiaryModel = DiaryModel()
     let viewModel: DiaryViewModel = DiaryViewModel()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    override func viewWillDisappear(_ animated: Bool) {
+           super.viewWillDisappear(animated)
 
+           if let mainVC = presentingViewController as? MainVC {
+               model.readDiaryData()
+                   mainVC.diaryTableView.reloadData()
+               
+           }
+       }
     @IBAction func deleteDiary(_ sender: Any) {
         guard let diaryIndex = diaryIndex else { return }
-        LocalDataStore.localDataStore.delTitle(index: diaryIndex)
-        LocalDataStore.localDataStore.delContents(index: diaryIndex)
-        LocalDataStore.localDataStore.delEmotion(index: diaryIndex)
-        LocalDataStore.localDataStore.delDate(index: diaryIndex)
+        model.deleteDiaryData(diaryIndex: diaryIndex)
         
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }

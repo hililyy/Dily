@@ -10,16 +10,16 @@ import UIKit
 class MainVC: UIViewController {
     var emotionData: UIImage?
     @IBOutlet weak var diaryTableView: UITableView!
-    
+    let model: DiaryModel = DiaryModel()
     let viewModel: DiaryViewModel = DiaryViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         diaryTableView.delegate = self
         diaryTableView.dataSource = self
+        model.readDiaryData()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        diaryTableView.reloadData()
-    }
+
     @IBAction func writeDiary(_ sender: Any) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "WriteVC") as? WriteVC {
             vc.modalTransitionStyle = .coverVertical
@@ -36,14 +36,14 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return LocalDataStore.localDataStore.getTitle().count
+        return model.diaryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = diaryTableView.dequeueReusableCell(withIdentifier: "diarycell", for: indexPath) as! DiaryTableViewCell
-        cell.title.text = LocalDataStore.localDataStore.getTitle()[indexPath.row]
-        cell.contents.text = LocalDataStore.localDataStore.getContents()[indexPath.row]
-        cell.emotionImage.image = UIImage(named: LocalDataStore.localDataStore.getEmotion()[indexPath.row])
+        cell.title.text = model.diaryList[indexPath.row].title
+        cell.contents.text = model.diaryList[indexPath.row].contents
+        cell.emotionImage.image = model.diaryList[indexPath.row].emotion
         return cell
     }
     
@@ -55,10 +55,10 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
-            vc.todayEmotionData = UIImage(named: LocalDataStore.localDataStore.getEmotion()[indexPath.row])
-            vc.todayTitleData = LocalDataStore.localDataStore.getTitle()[indexPath.row]
-            vc.todayContentsData = LocalDataStore.localDataStore.getContents()[indexPath.row]
-            vc.todayDateData = LocalDataStore.localDataStore.getDate()[indexPath.row]
+            vc.todayEmotionData = model.diaryList[indexPath.row].emotion
+            vc.todayTitleData = model.diaryList[indexPath.row].title
+            vc.todayContentsData = model.diaryList[indexPath.row].contents
+            vc.todayDateData = model.diaryList[indexPath.row].date
             vc.diaryIndex = indexPath.row
             self.present(vc, animated: true, completion: nil)
         }
@@ -67,6 +67,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
 extension MainVC: ReloadDataDelegate {
     func reloadMainTable() {
+        model.readDiaryData()
         diaryTableView.reloadData()
     }
 }

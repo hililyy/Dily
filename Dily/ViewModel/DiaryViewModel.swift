@@ -8,5 +8,5 @@
 import Foundation
 
 class DiaryViewModel {
-    let Model: DiaryModel = DiaryModel()
+    let model: DiaryModel = DiaryModel()
 }

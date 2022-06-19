@@ -14,24 +14,19 @@ class DetailVC: UIViewController {
     @IBOutlet weak var todayTitle: PaddingLabel!
     @IBOutlet weak var todayContents: PaddingLabel!
     
-    
     var todayDateData: String?
     var todayEmotionData: UIImage?
     var todayTitleData: String?
     var todayContentsData: String?
     var diaryIndex: Int?
+    
+    let model: DiaryModel = DiaryModel()
     let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
-        todayTitle.layer.borderWidth = 2
-        todayTitle.layer.borderColor = UIColor(named: "mainColor")?.cgColor
-        todayTitle.layer.cornerRadius = 10
-        
-        todayContents.layer.borderWidth = 2
-        todayContents.layer.borderColor = UIColor(named: "mainColor")?.cgColor
-        todayContents.layer.cornerRadius = 10
+        setBorder()
     }
     
     func setData() {
@@ -39,6 +34,16 @@ class DetailVC: UIViewController {
         todayEmotion.image = todayEmotionData
         todayTitle.text = todayTitleData
         todayContents.text = todayContentsData
+    }
+    
+    func setBorder() {
+        todayTitle.layer.borderWidth = 2
+        todayTitle.layer.borderColor = UIColor(named: "mainColor")?.cgColor
+        todayTitle.layer.cornerRadius = 10
+        
+        todayContents.layer.borderWidth = 2
+        todayContents.layer.borderColor = UIColor(named: "mainColor")?.cgColor
+        todayContents.layer.cornerRadius = 10
     }
     
     @IBAction func close(_ sender: Any) {
