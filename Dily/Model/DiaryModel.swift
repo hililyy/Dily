@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 
 class DiaryModel {
+    static let shareModel = DiaryModel()
     var diaryList: [DiaryEntity] = []
+    
+    private init() { }
     
     func readDiaryData() {
         for count in 0...LocalDataStore.localDataStore.getTitle().count-1 {
@@ -23,7 +26,6 @@ class DiaryModel {
     }
     
     func createDiaryData(enteredTitle: String, enteredContents: String, selectedEmotion: String) {
-        readDiaryData()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         let todayDate = dateFormatter.string(from: Date())
@@ -42,7 +44,6 @@ class DiaryModel {
     }
     
     func deleteDiaryData(diaryIndex: Int) {
-        readDiaryData()
         diaryList.remove(at: diaryIndex)
         LocalDataStore.localDataStore.delTitle(index: diaryIndex)
         LocalDataStore.localDataStore.delContents(index: diaryIndex)

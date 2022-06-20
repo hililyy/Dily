@@ -25,7 +25,7 @@ class WriteVC: UIViewController, UITextViewDelegate {
     var todayDate: String?
     
     weak var delegate: ReloadDataDelegate?
-    let model: DiaryModel = DiaryModel()
+    let model = DiaryModel.shareModel
     let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
@@ -34,6 +34,7 @@ class WriteVC: UIViewController, UITextViewDelegate {
         contentsTextView.delegate = self
         initalize()
     }
+    
     
     func initalize() {
         contentsTextView.layer.borderWidth = 2

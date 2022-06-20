@@ -10,11 +10,17 @@ import UIKit
 class MainVC: UIViewController {
     var emotionData: UIImage?
     @IBOutlet weak var diaryTableView: UITableView!
-    let model: DiaryModel = DiaryModel()
+    let model = DiaryModel.shareModel
     let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didDismissDeleteNotification(_:)),
+            name: NSNotification.Name("DismissDeleteView"),
+            object: nil
+        )
         diaryTableView.delegate = self
         diaryTableView.dataSource = self
         model.readDiaryData()
@@ -28,6 +34,13 @@ class MainVC: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
+    @objc func didDismissDeleteNotification(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.diaryTableView.reloadData()
+        }
+    }
+
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
@@ -67,7 +80,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
 extension MainVC: ReloadDataDelegate {
     func reloadMainTable() {
-        model.readDiaryData()
         diaryTableView.reloadData()
     }
 }

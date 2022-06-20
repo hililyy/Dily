@@ -20,7 +20,7 @@ class DetailVC: UIViewController {
     var todayContentsData: String?
     var diaryIndex: Int?
     
-    let model: DiaryModel = DiaryModel()
+    let model = DiaryModel.shareModel
     let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {

@@ -9,21 +9,15 @@ import UIKit
 
 class DeleteVC: UIViewController {
     var diaryIndex: Int?
-    let model: DiaryModel = DiaryModel()
+    let model = DiaryModel.shareModel
     let viewModel: DiaryViewModel = DiaryViewModel()
+    let DidDismissDeleteVC: Notification.Name = Notification.Name("DidDismissDeleteVC")
     
-    override func viewWillDisappear(_ animated: Bool) {
-           super.viewWillDisappear(animated)
-
-           if let mainVC = presentingViewController as? MainVC {
-               model.readDiaryData()
-                   mainVC.diaryTableView.reloadData()
-               
-           }
-       }
     @IBAction func deleteDiary(_ sender: Any) {
         guard let diaryIndex = diaryIndex else { return }
         model.deleteDiaryData(diaryIndex: diaryIndex)
+        
+        NotificationCenter.default.post(name: NSNotification.Name("DismissDeleteView"), object: nil, userInfo: nil)
         
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }
