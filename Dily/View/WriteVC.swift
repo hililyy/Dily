@@ -26,17 +26,16 @@ class WriteVC: UIViewController {
     
     weak var delegate: ReloadDataDelegate?
     let model = DiaryModel.shareModel
-    let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.delegate = self
         contentsTextView.delegate = self
-        initalize()
+        setBorder()
+        setImage()
     }
     
-    
-    func initalize() {
+    func setBorder() {
         contentsTextView.layer.borderWidth = 2
         contentsTextView.layer.borderColor = UIColor(named: "mainColor")?.cgColor
         contentsTextView.layer.cornerRadius = 10
@@ -44,12 +43,15 @@ class WriteVC: UIViewController {
         titleTextField.layer.borderColor = UIColor(named: "mainColor")?.cgColor
         titleTextField.layer.cornerRadius = 10
         enterBtn.layer.cornerRadius = 20
+
+    }
+    
+    func setImage() {
         self.loveBtn.alpha = 0.2
         self.happyBtn.alpha = 0.2
         self.sickBtn.alpha = 0.2
         self.sadBtn.alpha = 0.2
         self.angryBtn.alpha = 0.2
-        
     }
     
     @IBAction func tabEmotionBtn(_ sender: UIButton) {
@@ -96,11 +98,8 @@ class WriteVC: UIViewController {
         self.delegate?.reloadMainTable()
         self.dismiss(animated: true)
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 }
+
 protocol ReloadDataDelegate: AnyObject {
     func reloadMainTable()
 }
@@ -111,4 +110,7 @@ extension WriteVC: UITextFieldDelegate, UITextViewDelegate {
         contentsTextView.resignFirstResponder()
             return true
         }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

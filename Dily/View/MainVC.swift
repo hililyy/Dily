@@ -8,10 +8,10 @@
 import UIKit
 
 class MainVC: UIViewController {
-    var emotionData: UIImage?
     @IBOutlet weak var diaryTableView: UITableView!
+    
+    var emotionData: UIImage?
     let model = DiaryModel.shareModel
-    let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,6 @@ class MainVC: UIViewController {
             self.diaryTableView.reloadData()
         }
     }
-
 }
 
 extension MainVC: UITableViewDelegate, UITableViewDataSource {

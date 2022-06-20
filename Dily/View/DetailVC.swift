@@ -21,7 +21,6 @@ class DetailVC: UIViewController {
     var diaryIndex: Int?
     
     let model = DiaryModel.shareModel
-    let viewModel: DiaryViewModel = DiaryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +39,6 @@ class DetailVC: UIViewController {
         todayTitle.layer.borderWidth = 2
         todayTitle.layer.borderColor = UIColor(named: "mainColor")?.cgColor
         todayTitle.layer.cornerRadius = 10
-        
         todayContents.layer.borderWidth = 2
         todayContents.layer.borderColor = UIColor(named: "mainColor")?.cgColor
         todayContents.layer.cornerRadius = 10
@@ -49,7 +47,6 @@ class DetailVC: UIViewController {
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true)
     }
-    
 
     @IBAction func goDelete(_ sender: Any) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteVC") as? DeleteVC {

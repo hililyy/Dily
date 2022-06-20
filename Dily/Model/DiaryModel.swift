@@ -27,8 +27,8 @@ class DiaryModel {
             title: enteredTitle,
             contents: enteredContents,
             emotion: UIImage(named: selectedEmotion),
-            date: todayDate)
-
+            date: todayDate
+        )
         diaryList.append(newEntity)
     }
     
@@ -38,7 +38,8 @@ class DiaryModel {
                 title: LocalDataStore.localDataStore.getTitle()[count],
                 contents: LocalDataStore.localDataStore.getContents()[count],
                 emotion: UIImage(named: LocalDataStore.localDataStore.getEmotion()[count]),
-                date: LocalDataStore.localDataStore.getDate()[count])
+                date: LocalDataStore.localDataStore.getDate()[count]
+            )
             diaryList.append(entity)
         }
     }
@@ -48,7 +49,6 @@ class DiaryModel {
         diaryList[diaryIndex].contents = editContents
         LocalDataStore.localDataStore.editTitle(index: diaryIndex, editTitle: editTitle)
         LocalDataStore.localDataStore.editContents(index: diaryIndex, editContents: editContents)
-        
     }
     
     func deleteDiaryData(diaryIndex: Int) {

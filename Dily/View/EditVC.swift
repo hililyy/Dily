@@ -14,20 +14,21 @@ class EditVC: UIViewController {
     var beforeTitle: String?
     var beforeContents: String?
     let model = DiaryModel.shareModel
-    let viewModel: DiaryViewModel = DiaryViewModel()
     
     @IBOutlet weak var diaryTitle: UITextField!
     @IBOutlet weak var diaryContents: UITextView!
     @IBOutlet weak var editBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         diaryTitle.delegate = self
         diaryContents.delegate = self
         diaryTitle.text = beforeTitle
         diaryContents.text = beforeContents
-        initalize()
+        setBorder()
     }
-    func initalize() {
+    
+    func setBorder() {
         diaryTitle.layer.borderWidth = 2
         diaryTitle.layer.borderColor = UIColor(named: "mainColor")?.cgColor
         diaryTitle.layer.cornerRadius = 10
@@ -36,6 +37,7 @@ class EditVC: UIViewController {
         diaryContents.layer.cornerRadius = 10
         editBtn.layer.cornerRadius = 20
     }
+    
     @IBAction func edit(_ sender: Any) {
         editTitle = diaryTitle.text
         editContents = diaryContents.text
@@ -48,12 +50,7 @@ class EditVC: UIViewController {
         model.updateDiaryData(diaryIndex: diaryIndex, editTitle: editTitle, editContents: editContents)
         
         NotificationCenter.default.post(name: NSNotification.Name("DismissView"), object: nil, userInfo: nil)
-        
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
 }
 
@@ -62,5 +59,9 @@ extension EditVC: UITextFieldDelegate, UITextViewDelegate {
         diaryTitle.resignFirstResponder()
         diaryContents.resignFirstResponder()
         return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
