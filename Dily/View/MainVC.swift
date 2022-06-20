@@ -17,8 +17,8 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(self.didDismissDeleteNotification(_:)),
-            name: NSNotification.Name("DismissDeleteView"),
+            selector: #selector(self.didDismissNotification(_:)),
+            name: NSNotification.Name("DismissView"),
             object: nil
         )
         diaryTableView.delegate = self
@@ -35,7 +35,7 @@ class MainVC: UIViewController {
         }
     }
     
-    @objc func didDismissDeleteNotification(_ notification: Notification) {
+    @objc func didDismissNotification(_ notification: Notification) {
         DispatchQueue.main.async {
             self.diaryTableView.reloadData()
         }

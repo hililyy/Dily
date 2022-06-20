@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WriteVC: UIViewController, UITextViewDelegate {
+class WriteVC: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
@@ -105,7 +105,7 @@ protocol ReloadDataDelegate: AnyObject {
     func reloadMainTable()
 }
 
-extension WriteVC: UITextFieldDelegate {
+extension WriteVC: UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleTextField.resignFirstResponder()
         contentsTextView.resignFirstResponder()

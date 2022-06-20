@@ -17,7 +17,7 @@ class DeleteVC: UIViewController {
         guard let diaryIndex = diaryIndex else { return }
         model.deleteDiaryData(diaryIndex: diaryIndex)
         
-        NotificationCenter.default.post(name: NSNotification.Name("DismissDeleteView"), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissView"), object: nil, userInfo: nil)
         
         self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
     }

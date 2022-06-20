@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 struct DiaryEntity {
-    let title: String?
-    let contents: String?
+    var title: String?
+    var contents: String?
     let emotion: UIImage?
     let date: String?
 }

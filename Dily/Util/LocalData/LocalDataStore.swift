@@ -25,6 +25,12 @@ class LocalDataStore {
         UserDefaults.standard.set(getTitle, forKey: LocalDataKeySet.DIARY_TITLE.rawValue)
     }
     
+    func editTitle(index: Int, editTitle: String) {
+        var getTitle = getTitle()
+        getTitle[index] = editTitle
+        UserDefaults.standard.set(getTitle, forKey: LocalDataKeySet.DIARY_TITLE.rawValue)
+    }
+    
     
     func getContents() -> [String] {
         UserDefaults.standard.array(forKey: LocalDataKeySet.DIARY_CONTENTS.rawValue) as? [String] ?? []
@@ -37,6 +43,11 @@ class LocalDataStore {
     func delContents(index: Int) {
         var getContents = getContents()
         getContents.remove(at: index)
+        UserDefaults.standard.set(getContents, forKey: LocalDataKeySet.DIARY_CONTENTS.rawValue)
+    }
+    func editContents(index: Int, editContents: String) {
+        var getContents = getContents()
+        getContents[index] = editContents
         UserDefaults.standard.set(getContents, forKey: LocalDataKeySet.DIARY_CONTENTS.rawValue)
     }
     

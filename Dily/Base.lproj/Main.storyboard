@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,7 +62,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용임" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFd-LG-Kff">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용임" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFd-LG-Kff">
                                                     <rect key="frame" x="100" y="32" width="299" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="7rK-ue-w0d"/>
@@ -169,24 +170,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-sb-HcY" customClass="PaddingTextField" customModule="Dily" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-sb-HcY">
                                 <rect key="frame" x="50" y="334" width="314" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Xhj-NG-mZj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fmM-p2-NDr">
                                 <rect key="frame" x="50" y="431.5" width="314" height="280"/>
@@ -326,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rQ-DM-mmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="747.82608695652175" y="-246.42857142857142"/>
+            <point key="canvasLocation" x="748" y="-248"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="tVp-AZ-6KA">
@@ -440,10 +430,27 @@
                                                             <action selector="goDelete:" destination="LG0-gX-2f5" eventType="touchUpInside" id="QKX-Yj-xZd"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDs-Xd-dsP">
+                                                        <rect key="frame" x="36" y="600" width="124" height="36"/>
+                                                        <color key="backgroundColor" name="mainColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="3uK-Lf-RUm"/>
+                                                            <constraint firstAttribute="width" constant="124" id="jp4-kO-Gmx"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="수정">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="goEdit:" destination="LG0-gX-2f5" eventType="touchUpInside" id="2VG-e2-hQu"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="344" id="2YT-9g-qSW"/>
                                                     <constraint firstItem="qXf-Wt-6v4" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="41" id="3SF-BJ-ise"/>
+                                                    <constraint firstItem="SDs-Xd-dsP" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="36" id="4Ob-eR-0qL"/>
                                                     <constraint firstItem="q4j-Pe-lS0" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="40" id="5zj-cg-m4i"/>
                                                     <constraint firstItem="36p-dg-6a6" firstAttribute="trailing" secondItem="FPZ-BN-z8c" secondAttribute="trailing" constant="30" id="9yy-Zc-xEM"/>
                                                     <constraint firstItem="K2S-lR-an1" firstAttribute="top" secondItem="gNy-nn-eJG" secondAttribute="bottom" constant="15" id="E4B-ac-aXF"/>
@@ -465,6 +472,7 @@
                                                     <constraint firstItem="aSg-WY-hv0" firstAttribute="top" secondItem="29X-z6-JMI" secondAttribute="top" constant="27" id="tei-56-LPp"/>
                                                     <constraint firstAttribute="trailing" secondItem="qXf-Wt-6v4" secondAttribute="trailing" constant="223" id="ui6-AK-ZAm"/>
                                                     <constraint firstItem="gNy-nn-eJG" firstAttribute="leading" secondItem="29X-z6-JMI" secondAttribute="leading" constant="40" id="wTv-Aj-StM"/>
+                                                    <constraint firstItem="29X-z6-JMI" firstAttribute="bottom" secondItem="SDs-Xd-dsP" secondAttribute="bottom" constant="40" id="zmD-NT-ceO"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="36p-dg-6a6"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="29X-z6-JMI"/>
@@ -510,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuS-SK-G0D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="463"/>
+            <point key="canvasLocation" x="747.82608695652175" y="462.72321428571428"/>
         </scene>
         <!--DeleteVC-->
         <scene sceneID="B4t-us-Xmw">
@@ -601,6 +609,96 @@
             </objects>
             <point key="canvasLocation" x="1510.144927536232" y="462.72321428571428"/>
         </scene>
+        <!--EditVC-->
+        <scene sceneID="7Go-5h-Kxr">
+            <objects>
+                <viewController storyboardIdentifier="EditVC" id="E2o-4M-ssD" customClass="EditVC" customModule="Dily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YHe-Vs-91H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYm-mO-VSk">
+                                <rect key="frame" x="50" y="182" width="314" height="23.5"/>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-ej-tUi">
+                                <rect key="frame" x="50" y="279.5" width="314" height="23.5"/>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psr-9n-t9O">
+                                <rect key="frame" x="168" y="119" width="78.5" height="33"/>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7f-jm-Ukr">
+                                <rect key="frame" x="50" y="215.5" width="314" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="8Qy-qY-Vng"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="brk-nt-roF">
+                                <rect key="frame" x="50" y="313" width="314" height="280"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="ETR-bz-kyi"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvL-YO-7f8">
+                                <rect key="frame" x="145" y="623" width="124" height="36"/>
+                                <color key="backgroundColor" red="0.89000000000000001" green="0.73065121519999998" blue="0.85584535139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="수정하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="edit:" destination="E2o-4M-ssD" eventType="touchUpInside" id="tVK-m5-C5c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uyo-nB-m06"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="psr-9n-t9O" firstAttribute="top" secondItem="uyo-nB-m06" secondAttribute="top" constant="75" id="4tA-I0-hqw"/>
+                            <constraint firstItem="GvL-YO-7f8" firstAttribute="top" secondItem="brk-nt-roF" secondAttribute="bottom" constant="30" id="72K-sQ-kCI"/>
+                            <constraint firstItem="uyo-nB-m06" firstAttribute="trailing" secondItem="eYm-mO-VSk" secondAttribute="trailing" constant="50" id="KGH-Dh-bLP"/>
+                            <constraint firstItem="eYm-mO-VSk" firstAttribute="top" secondItem="psr-9n-t9O" secondAttribute="bottom" constant="30" id="PyT-qN-Sip"/>
+                            <constraint firstItem="4jY-ej-tUi" firstAttribute="leading" secondItem="uyo-nB-m06" secondAttribute="leading" constant="50" id="THs-H4-TaC"/>
+                            <constraint firstItem="uyo-nB-m06" firstAttribute="trailing" secondItem="brk-nt-roF" secondAttribute="trailing" constant="50" id="XV1-7b-8Sm"/>
+                            <constraint firstItem="I7f-jm-Ukr" firstAttribute="top" secondItem="eYm-mO-VSk" secondAttribute="bottom" constant="10" id="YCl-vV-deF"/>
+                            <constraint firstItem="uyo-nB-m06" firstAttribute="trailing" secondItem="4jY-ej-tUi" secondAttribute="trailing" constant="50" id="aD6-NK-D2c"/>
+                            <constraint firstItem="I7f-jm-Ukr" firstAttribute="leading" secondItem="uyo-nB-m06" secondAttribute="leading" constant="50" id="cL9-40-bpn"/>
+                            <constraint firstItem="eYm-mO-VSk" firstAttribute="leading" secondItem="uyo-nB-m06" secondAttribute="leading" constant="50" id="iVO-lr-8aI"/>
+                            <constraint firstItem="brk-nt-roF" firstAttribute="leading" secondItem="uyo-nB-m06" secondAttribute="leading" constant="50" id="jta-jF-StZ"/>
+                            <constraint firstItem="uyo-nB-m06" firstAttribute="trailing" secondItem="I7f-jm-Ukr" secondAttribute="trailing" constant="50" id="kGe-zp-pMM"/>
+                            <constraint firstItem="GvL-YO-7f8" firstAttribute="leading" secondItem="uyo-nB-m06" secondAttribute="leading" constant="145" id="nLi-T6-IpS"/>
+                            <constraint firstItem="brk-nt-roF" firstAttribute="top" secondItem="4jY-ej-tUi" secondAttribute="bottom" constant="10" id="qqM-LF-Jsx"/>
+                            <constraint firstItem="4jY-ej-tUi" firstAttribute="top" secondItem="I7f-jm-Ukr" secondAttribute="bottom" constant="30" id="tEY-38-unF"/>
+                            <constraint firstItem="GvL-YO-7f8" firstAttribute="centerX" secondItem="YHe-Vs-91H" secondAttribute="centerX" id="tFB-5q-LIQ"/>
+                            <constraint firstItem="psr-9n-t9O" firstAttribute="centerX" secondItem="YHe-Vs-91H" secondAttribute="centerX" id="u6U-rV-nL7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="diaryContents" destination="brk-nt-roF" id="wrK-xQ-JJa"/>
+                        <outlet property="diaryTitle" destination="I7f-jm-Ukr" id="9KS-i1-0n5"/>
+                        <outlet property="editBtn" destination="GvL-YO-7f8" id="Yyy-zf-cIH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tj0-wx-eSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1538" y="-248"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="9Hg-sb-HcY">
@@ -622,6 +720,9 @@
         <image name="love" width="93" height="91"/>
         <image name="sad" width="93" height="93"/>
         <image name="sick" width="94" height="92"/>
+        <namedColor name="mainColor">
+            <color red="0.88999998569488525" green="0.72899997234344482" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -59,6 +59,17 @@ class DetailVC: UIViewController {
             self.present(vc, animated: true, completion: nil)
         }
     }
+    
+    @IBAction func goEdit(_ sender: Any) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditVC") as? EditVC {
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.diaryIndex = self.diaryIndex
+            vc.beforeTitle = todayTitleData
+            vc.beforeContents = todayContentsData
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
 }
 
 @IBDesignable class PaddingLabel: UILabel {
