@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Dily
 //
 //  Created by 강조은 on 2022/06/13.
@@ -55,7 +55,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         let cell = diaryTableView.dequeueReusableCell(withIdentifier: "diarycell", for: indexPath) as! DiaryTableViewCell
         cell.title.text = model.diaryList[indexPath.row].title
         cell.contents.text = model.diaryList[indexPath.row].contents
-        cell.emotionImage.image = model.diaryList[indexPath.row].emotion
+        cell.emotionImage.image = UIImage(named: model.diaryList[indexPath.row].emotion ?? "love")
         return cell
     }
     
@@ -67,7 +67,8 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC {
             vc.modalTransitionStyle = .crossDissolve
             vc.modalPresentationStyle = .overCurrentContext
-            vc.todayEmotionData = model.diaryList[indexPath.row].emotion
+            vc.todayEmotionData =
+            UIImage(named: model.diaryList[indexPath.row].emotion ?? "love")
             vc.todayTitleData = model.diaryList[indexPath.row].title
             vc.todayContentsData = model.diaryList[indexPath.row].contents
             vc.todayDateData = model.diaryList[indexPath.row].date

@@ -12,50 +12,41 @@ class DiaryModel {
     static let shareModel = DiaryModel()
     var diaryList: [DiaryEntity] = []
     
-    private init() { }
+    private init() {}
     
     func createDiaryData(enteredTitle: String, enteredContents: String, selectedEmotion: String) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         let todayDate = dateFormatter.string(from: Date())
-        LocalDataStore.localDataStore.setTitle(title: enteredTitle)
-        LocalDataStore.localDataStore.setContents(contents: enteredContents)
-        LocalDataStore.localDataStore.setDate(date: todayDate)
-        LocalDataStore.localDataStore.setEmotion(emotion: selectedEmotion)
-        
+
         let newEntity = DiaryEntity(
             title: enteredTitle,
             contents: enteredContents,
-            emotion: UIImage(named: selectedEmotion),
+            emotion: selectedEmotion,
             date: todayDate
         )
+
         diaryList.append(newEntity)
+        LocalDataStore.localDataStore.setData(newData: diaryList)
     }
     
     func readDiaryData() {
-        for count in 0...LocalDataStore.localDataStore.getTitle().count-1 {
-            let entity = DiaryEntity(
-                title: LocalDataStore.localDataStore.getTitle()[count],
-                contents: LocalDataStore.localDataStore.getContents()[count],
-                emotion: UIImage(named: LocalDataStore.localDataStore.getEmotion()[count]),
-                date: LocalDataStore.localDataStore.getDate()[count]
-            )
-            diaryList.append(entity)
+        if LocalDataStore.localDataStore.getData().count != 0 {
+            for count in 0...LocalDataStore.localDataStore.getData().count-1 {
+                let entity = LocalDataStore.localDataStore.getData()[count]
+                diaryList.append(entity)
+            }
         }
     }
     
     func updateDiaryData(diaryIndex: Int, editTitle: String, editContents: String) {
         diaryList[diaryIndex].title = editTitle
         diaryList[diaryIndex].contents = editContents
-        LocalDataStore.localDataStore.editTitle(index: diaryIndex, editTitle: editTitle)
-        LocalDataStore.localDataStore.editContents(index: diaryIndex, editContents: editContents)
+        LocalDataStore.localDataStore.setData(newData: diaryList)
     }
     
     func deleteDiaryData(diaryIndex: Int) {
         diaryList.remove(at: diaryIndex)
-        LocalDataStore.localDataStore.delTitle(index: diaryIndex)
-        LocalDataStore.localDataStore.delContents(index: diaryIndex)
-        LocalDataStore.localDataStore.delEmotion(index: diaryIndex)
-        LocalDataStore.localDataStore.delDate(index: diaryIndex)
+        LocalDataStore.localDataStore.setData(newData: diaryList)
     }
 }

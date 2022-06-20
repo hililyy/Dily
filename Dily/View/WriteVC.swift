@@ -19,7 +19,7 @@ class WriteVC: UIViewController {
     @IBOutlet weak var sadBtn: UIButton!
     @IBOutlet weak var angryBtn: UIButton!
     
-    var selectedEmotion: String?
+    var selectedEmotion: String = "love"
     var enteredTitle: String?
     var enteredContents: String?
     var todayDate: String?
@@ -47,7 +47,7 @@ class WriteVC: UIViewController {
     }
     
     func setImage() {
-        self.loveBtn.alpha = 0.2
+        self.loveBtn.alpha = 1
         self.happyBtn.alpha = 0.2
         self.sickBtn.alpha = 0.2
         self.sadBtn.alpha = 0.2
@@ -85,8 +85,7 @@ class WriteVC: UIViewController {
         enteredTitle = titleTextField.text
         enteredContents = contentsTextView.text
         
-        guard let selectedEmotion = self.selectedEmotion,
-              let enteredTitle = self.enteredTitle,
+        guard let enteredTitle = self.enteredTitle,
               let enteredContents = self.enteredContents
         else { return }
         

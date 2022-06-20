@@ -8,8 +8,5 @@
 import Foundation
 
 enum LocalDataKeySet: String {
-    case DIARY_TITLE = "diary_title"
-    case DIARY_CONTENTS = "diary_contents"
-    case DIARY_DATE = "diary_date"
-    case DIARY_EMOTION = "diary_emotion"
+    case DIARY_DATA = "diary_data"
 }

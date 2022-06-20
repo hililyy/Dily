@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-struct DiaryEntity {
+struct DiaryEntity: Codable {
     var title: String?
     var contents: String?
-    let emotion: UIImage?
+    let emotion: String?
     let date: String?
 }
