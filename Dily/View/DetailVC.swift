@@ -59,8 +59,8 @@ class DetailVC: UIViewController {
     
     @IBAction func goEdit(_ sender: Any) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditVC") as? EditVC {
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
+            vc.modalTransitionStyle = .coverVertical
+            vc.modalPresentationStyle = .popover
             vc.diaryIndex = self.diaryIndex
             vc.beforeTitle = todayTitleData
             vc.beforeContents = todayContentsData
