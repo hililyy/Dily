@@ -99,9 +99,6 @@ class WriteVC: UIViewController {
     }
 }
 
-protocol ReloadDataDelegate: AnyObject {
-    func reloadMainTable()
-}
 
 extension WriteVC: UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

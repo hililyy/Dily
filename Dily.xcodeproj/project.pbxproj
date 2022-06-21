@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A1420B928621464000ED274 /* DiaryFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1420B828621464000ED274 /* DiaryFunction.swift */; };
 		2AE28A95285712120008C83B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A94285712120008C83B /* AppDelegate.swift */; };
 		2AE28A97285712120008C83B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A96285712120008C83B /* SceneDelegate.swift */; };
 		2AE28A99285712120008C83B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28A98285712120008C83B /* MainVC.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A1420B828621464000ED274 /* DiaryFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryFunction.swift; sourceTree = "<group>"; };
 		2AE28A91285712120008C83B /* Dily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE28A94285712120008C83B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE28A96285712120008C83B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				2AE28AC0285B392B0008C83B /* DiaryModel.swift */,
 				2AE28ABE285B22140008C83B /* DiaryEntity.swift */,
+				2A1420B828621464000ED274 /* DiaryFunction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				2AE28ACB285C6D270008C83B /* DiaryViewModel.swift in Sources */,
 				2AE28AC3285B427D0008C83B /* LocalDataStore.swift in Sources */,
 				2AE28AC7285B4A0D0008C83B /* LocalDataKeySet.swift in Sources */,
+				2A1420B928621464000ED274 /* DiaryFunction.swift in Sources */,
 				2AE28AAE285726F60008C83B /* WriteVC.swift in Sources */,
 				2AE28AC9285B92120008C83B /* DeleteVC.swift in Sources */,
 				2AE28AB02857273F0008C83B /* DiaryTableViewCell.swift in Sources */,

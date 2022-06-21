@@ -13,7 +13,9 @@ class DiaryModel {
     var diaryList: [DiaryEntity] = []
     
     private init() {}
-    
+}
+
+extension DiaryModel: DiaryFunction {
     func createDiaryData(enteredTitle: String, enteredContents: String, selectedEmotion: String) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
