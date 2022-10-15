@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -23,24 +24,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_purple" translatesAutoresizingMaskIntoConstraints="NO" id="qFA-aW-ClD">
-                                <rect key="frame" x="148.5" y="44" width="117" height="128"/>
+                                <rect key="frame" x="148.5" y="48" width="117" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="Goh-LC-Ic4"/>
                                     <constraint firstAttribute="height" constant="128" id="qGJ-bf-tG2"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Clx-uK-ReQ">
-                                <rect key="frame" x="180" y="74" width="54" height="47"/>
+                                <rect key="frame" x="174" y="78" width="66" height="47"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hKy-7F-03Y">
-                                <rect key="frame" x="0.0" y="181" width="414" height="711"/>
+                                <rect key="frame" x="0.0" y="185" width="414" height="707"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="diarycell" rowHeight="91" id="DaI-7Q-fwk" customClass="DiaryTableViewCell" customModule="Dily" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="91"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DaI-7Q-fwk" id="pht-s8-yq4">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
@@ -93,7 +94,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfB-gN-Vdt">
-                                <rect key="frame" x="292" y="134" width="92" height="32"/>
+                                <rect key="frame" x="292" y="138" width="92" height="32"/>
                                 <color key="backgroundColor" red="0.89000000000000001" green="0.73065121519999998" blue="0.85584535139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92" id="FXB-oI-vrX"/>
@@ -140,38 +141,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_purple" translatesAutoresizingMaskIntoConstraints="NO" id="iM0-aU-ow4">
-                                <rect key="frame" x="84" y="130" width="267" height="29"/>
+                                <rect key="frame" x="84" y="134" width="267" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="267" id="B2s-Ch-g26"/>
                                     <constraint firstAttribute="height" constant="29" id="aeV-nT-y11"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목을 입력해 주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVK-QP-nkO">
-                                <rect key="frame" x="50" y="300.5" width="314" height="23.5"/>
+                                <rect key="frame" x="50" y="304.5" width="314" height="23.5"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정을 선택해 주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihl-Ex-BDX">
-                                <rect key="frame" x="50" y="192" width="314" height="23.5"/>
+                                <rect key="frame" x="50" y="196" width="314" height="23.5"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘 하루는 어땠나요? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2U-I7-dJf">
-                                <rect key="frame" x="50" y="398" width="314" height="23.5"/>
+                                <rect key="frame" x="50" y="402" width="314" height="23.5"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="감정을 기록해 보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aS-ME-nhS">
-                                <rect key="frame" x="112.5" y="119" width="189.5" height="33"/>
+                                <rect key="frame" x="86.5" y="123" width="241" height="33"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Hg-sb-HcY">
-                                <rect key="frame" x="50" y="334" width="314" height="34"/>
+                                <rect key="frame" x="50" y="338" width="314" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Xhj-NG-mZj"/>
                                 </constraints>
@@ -179,7 +180,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fmM-p2-NDr">
-                                <rect key="frame" x="50" y="431.5" width="314" height="280"/>
+                                <rect key="frame" x="50" y="435.5" width="314" height="280"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="FFt-2T-4Br"/>
@@ -189,7 +190,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="iB4-pQ-yqK">
-                                <rect key="frame" x="49" y="230.5" width="316" height="40"/>
+                                <rect key="frame" x="49" y="234.5" width="316" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTn-Bb-heP">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -259,7 +260,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-Zh-atH">
-                                <rect key="frame" x="145" y="741.5" width="124" height="36"/>
+                                <rect key="frame" x="145" y="745.5" width="124" height="36"/>
                                 <color key="backgroundColor" red="0.89000000000000001" green="0.73065121519999998" blue="0.85584535139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -618,25 +619,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYm-mO-VSk">
-                                <rect key="frame" x="50" y="182" width="314" height="23.5"/>
+                                <rect key="frame" x="50" y="186" width="314" height="23.5"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jY-ej-tUi">
-                                <rect key="frame" x="50" y="279.5" width="314" height="23.5"/>
+                                <rect key="frame" x="50" y="283.5" width="314" height="23.5"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psr-9n-t9O">
-                                <rect key="frame" x="168" y="119" width="78.5" height="33"/>
+                                <rect key="frame" x="158.5" y="123" width="97" height="33"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text=" " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I7f-jm-Ukr">
-                                <rect key="frame" x="50" y="215.5" width="314" height="34"/>
+                                <rect key="frame" x="50" y="219.5" width="314" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="8Qy-qY-Vng"/>
                                 </constraints>
@@ -644,7 +645,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="brk-nt-roF">
-                                <rect key="frame" x="50" y="313" width="314" height="280"/>
+                                <rect key="frame" x="50" y="317" width="314" height="280"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="ETR-bz-kyi"/>
@@ -654,7 +655,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvL-YO-7f8">
-                                <rect key="frame" x="145" y="623" width="124" height="36"/>
+                                <rect key="frame" x="145" y="627" width="124" height="36"/>
                                 <color key="backgroundColor" red="0.89000000000000001" green="0.73065121519999998" blue="0.85584535139999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KOTRAHOPE" family="KOTRA HOPE" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -721,7 +722,7 @@
             <color red="0.88999998569488525" green="0.72899997234344482" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

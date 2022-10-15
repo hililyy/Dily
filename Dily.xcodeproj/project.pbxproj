@@ -25,7 +25,6 @@
 		2AE28AC3285B427D0008C83B /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC2285B427D0008C83B /* LocalDataStore.swift */; };
 		2AE28AC7285B4A0D0008C83B /* LocalDataKeySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC6285B4A0D0008C83B /* LocalDataKeySet.swift */; };
 		2AE28AC9285B92120008C83B /* DeleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28AC8285B92110008C83B /* DeleteVC.swift */; };
-		2AE28ACB285C6D270008C83B /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28ACA285C6D270008C83B /* DiaryViewModel.swift */; };
 		2AE28ACD2860D1CB0008C83B /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE28ACC2860D1CB0008C83B /* EditVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +49,6 @@
 		2AE28AC2285B427D0008C83B /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
 		2AE28AC6285B4A0D0008C83B /* LocalDataKeySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataKeySet.swift; sourceTree = "<group>"; };
 		2AE28AC8285B92110008C83B /* DeleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVC.swift; sourceTree = "<group>"; };
-		2AE28ACA285C6D270008C83B /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
 		2AE28ACC2860D1CB0008C83B /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,6 @@
 				2AE28AC4285B49D50008C83B /* Util */,
 				2AE28ABD285B21B20008C83B /* Model */,
 				2AE28ABB285B21680008C83B /* View */,
-				2AE28ABC285B219F0008C83B /* ViewModel */,
 				2AE28AA82857181D0008C83B /* Font */,
 				2AE28A94285712120008C83B /* AppDelegate.swift */,
 				2AE28A96285712120008C83B /* SceneDelegate.swift */,
@@ -120,14 +117,6 @@
 				2AE28AAF2857273F0008C83B /* DiaryTableViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2AE28ABC285B219F0008C83B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				2AE28ACA285C6D270008C83B /* DiaryViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2AE28ABD285B21B20008C83B /* Model */ = {
@@ -231,7 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE28ACB285C6D270008C83B /* DiaryViewModel.swift in Sources */,
 				2AE28AC3285B427D0008C83B /* LocalDataStore.swift in Sources */,
 				2AE28AC7285B4A0D0008C83B /* LocalDataKeySet.swift in Sources */,
 				2A1420B928621464000ED274 /* DiaryFunction.swift in Sources */,
